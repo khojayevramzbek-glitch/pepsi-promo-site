@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pepsi — Har Bir Qultumda Jo'shqinlik!</title>
+  <meta name="description" content="Pepsi Rasmiy Reklama Sayti. Yangi Pepsi ta'mlarini kashf eting, o'z ichimligingizni yarating va eksklyuziv sovrinlar aksiyasida qatnashing!">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/pepsi_hero.jpg" type="image/jpeg">
+</head>
+<body>
+
+  <!-- Carbonation Canvas Background -->
+  <canvas id="bubbleCanvas"></canvas>
+
+  <!-- Ambient Glows -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Navigation Header -->
+  <header id="mainHeader">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <div class="pepsi-globe-icon"></div>
+        <span class="brand-text">PEPSI</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Bosh Sahifa</a></li>
+        <li><a href="#products">Mahsulotlar</a></li>
+        <li><a href="#mixer">Ta'm Mikseri</a></li>
+        <li><a href="#campaign">Aksiya 2026</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="soundToggle" class="audio-toggle-btn" title="Ovozni yoqish/o'chirish">
+          <span id="soundIcon">🔊</span>
+          <span id="soundText">Ovoz: ON</span>
+        </button>
+        <a href="#campaign" class="btn-primary btn-red">Aksiyaga Qatnash</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          Yangi Avlod Energiyasi
+        </div>
+        <h1 class="hero-title">
+          HAR BIR QULTUMDA <span class="blue">JO'SHQINLIK</span> VA <span class="red">TA'M</span>!
+        </h1>
+        <p class="hero-subtitle">
+          Muzday Pepsi bilan chanqog'ingni qondir. Har kuni yangi tuyg'ular, cheksiz energiya va yorqin lahzalarni his et!
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn-primary" id="heroSipBtn">
+            <span>🥤</span> Hozir Qultum Ol
+          </button>
+          <a href="#mixer" class="btn-secondary">
+            <span>🧪</span> O'z Ta'mingni Yarat
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3 id="statIce">100%</h3>
+            <p>Muzday Salqinlik</p>
+          </div>
+          <div class="stat-item">
+            <h3>0%</h3>
+            <p>Tushkunlik</p>
+          </div>
+          <div class="stat-item">
+            <h3>5M+</h3>
+            <p>O'zbekistonda Muxlislar</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="can-container">
+          <div class="glow-backdrop"></div>
+          <button id="playFizzSound" class="play-sound-trigger" title="Pepsi ochilish ovozini eshiting!">
+            <span>🎵</span> Ovozni Eshit!
+          </button>
+          <img src="assets/pepsi_hero.jpg" alt="Pepsi Can Ice Splash" class="hero-can-img" id="heroCan">
+          
+          <div class="badge-overlay">
+            <div class="badge-icon">❄️</div>
+            <div class="badge-text">
+              <span>Harorat</span>
+              <strong>-2°C MUZDAY</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Lineup Section -->
+  <section id="products" class="products-section">
+    <div class="section-header">
+      <span class="section-subtitle">Pepsi Kolleksiyasi</span>
+      <h2 class="section-title">SEVIMLI TA'MINGNI TANLA</h2>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="tab-btn active" data-filter="all">Barchasi</button>
+      <button class="tab-btn" data-filter="classic">Klassik</button>
+      <button class="tab-btn" data-filter="zero">Zero Sugar</button>
+      <button class="tab-btn" data-filter="flavor">Mevali Twist</button>
+    </div>
+
+    <div class="products-grid">
+      <!-- Card 1 -->
+      <div class="product-card" data-category="classic">
+        <span class="product-tag">Afsona</span>
+        <div class="product-img-wrapper">
+          <img src="assets/pepsi_hero.jpg" alt="Pepsi Classic" class="product-img">
+        </div>
+        <h3 class="product-name">Pepsi Classic</h3>
+        <p class="product-desc">O'zgarmas klassik karamel ta'mi va har bir pufakchada mislsiz rohat.</p>
+        <div class="product-details">
+          <div class="rating">⭐ 4.9 (12.4k)</div>
+          <button class="btn-card-action view-details-btn" data-title="Pepsi Classic" data-desc="Afsonaviy original karamel formulasi. Maksimal salqinlik va jo'shqin energiya." data-calories="150 kcal" data-caffeine="38 mg">Batafsil</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card" data-category="zero">
+        <span class="product-tag">Nol Shakar</span>
+        <div class="product-img-wrapper">
+          <img src="assets/pepsi_zero.jpg" alt="Pepsi Zero Sugar" class="product-img">
+        </div>
+        <h3 class="product-name">Pepsi Zero Sugar</h3>
+        <p class="product-desc">Nol gramm shakar, lekin 100% haqiqiy va jo'shqin Pepsi ta'mi.</p>
+        <div class="product-details">
+          <div class="rating">⭐ 4.8 (9.8k)</div>
+          <button class="btn-card-action view-details-btn" data-title="Pepsi Zero Sugar" data-desc="Fitnes va yengil turmush tarzi uchun ideal. Nol kaloriya va kuchli gazlangan rohat." data-calories="0 kcal" data-caffeine="35 mg">Batafsil</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card" data-category="flavor">
+        <span class="product-tag">Eksotik</span>
+        <div class="product-img-wrapper">
+          <img src="assets/pepsi_mango.jpg" alt="Pepsi Mango" class="product-img">
+        </div>
+        <h3 class="product-name">Pepsi Mango</h3>
+        <p class="product-desc">Klassik Pepsi ta'mi va shirin tropik mango bo'lagining ajoyib uyg'unligi.</p>
+        <div class="product-details">
+          <div class="rating">⭐ 4.9 (8.1k)</div>
+          <button class="btn-card-action view-details-btn" data-title="Pepsi Mango" data-desc="Yozgi kayfiyat va tropik shabada bag'ishlovchi yangi eksotik ta'm." data-calories="140 kcal" data-caffeine="35 mg">Batafsil</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card" data-category="flavor">
+        <span class="product-tag">Mashhur</span>
+        <div class="product-img-wrapper">
+          <img src="assets/pepsi_cherry.jpg" alt="Pepsi Wild Cherry" class="product-img">
+        </div>
+        <h3 class="product-name">Pepsi Wild Cherry</h3>
+        <p class="product-desc">Yovvoyi olchaning nordon-shirin ta'mi va Pepsi shiddati.</p>
+        <div class="product-details">
+          <div class="rating">⭐ 5.0 (15.2k)</div>
+          <button class="btn-card-action view-details-btn" data-title="Pepsi Wild Cherry" data-desc="Chuqur olcha xushbo'yligi bilan boyitilgan premium ta'm." data-calories="155 kcal" data-caffeine="38 mg">Batafsil</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Flavor Mixer Section -->
+  <section id="mixer" class="mixer-section">
+    <div class="section-header">
+      <span class="section-subtitle">Interaktiv Laboratoriya</span>
+      <h2 class="section-title">O'Z PEPSI MIKSIYANGNI YARAT</h2>
+    </div>
+
+    <div class="mixer-container">
+      <div class="mixer-controls">
+        <div class="control-group">
+          <div class="control-label">
+            <span>🧊 Muz Darajasi (Salqinlik)</span>
+            <span class="value" id="iceVal">3 KUB</span>
+          </div>
+          <input type="range" id="iceRange" min="0" max="5" value="3">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>🫧 Gaz Zichligi (Carbonation)</span>
+            <span class="value" id="fizzVal">80%</span>
+          </div>
+          <input type="range" id="fizzRange" min="20" max="100" value="80">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>🍋 Qo'shimcha Twist Ta'm</span>
+          </div>
+          <div class="flavor-buttons">
+            <button class="flavor-opt-btn active" data-flavor="classic">Klassik</button>
+            <button class="flavor-opt-btn" data-flavor="lemon">Limon</button>
+            <button class="flavor-opt-btn" data-flavor="mint">Yalpiz</button>
+          </div>
+        </div>
+
+        <button class="btn-primary btn-red" id="pourDrinkBtn" style="margin-top: 1rem;">
+          <span>🥤</span> Ichimlikni Quyish (Ovoz FX)
+        </button>
+      </div>
+
+      <div class="drink-visualizer">
+        <div class="glass-wrapper">
+          <div class="glass-liquid" id="glassLiquid">
+            <div class="liquid-foam"></div>
+            <div class="ice-cubes-container" id="iceContainer">
+              <div class="ice-cube" style="top: 20%; left: 20%;"></div>
+              <div class="ice-cube" style="top: 45%; left: 50%;"></div>
+              <div class="ice-cube" style="top: 60%; left: 25%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="drink-name-badge" id="customDrinkName">
+          Pepsi Special Mix ⚡
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Campaign & Contest Section -->
+  <section id="campaign" class="campaign-section">
+    <div class="banner-card">
+      <span class="section-subtitle">KATTA AKSIYA 2026</span>
+      <h2 class="section-title">PEPSI MUSIC FESTIVALGA TASHRIF BUUYUR!</h2>
+      <p style="color: var(--text-dim); max-width: 600px; margin: 1rem auto 0;">
+        Promokodni kirit, VIP chipta va eng so'nggi rusumdagi gadjetlarni yutib olish imkoniyatini qo'ldan boy bermang!
+      </p>
+
+      <div class="countdown-wrapper">
+        <div class="time-box">
+          <span class="num" id="cdDays">14</span>
+          <span class="label">KUN</span>
+        </div>
+        <div class="time-box">
+          <span class="num" id="cdHours">08</span>
+          <span class="label">SOAT</span>
+        </div>
+        <div class="time-box">
+          <span class="num" id="cdMins">45</span>
+          <span class="label">DAQIQA</span>
+        </div>
+        <div class="time-box">
+          <span class="num" id="cdSecs">22</span>
+          <span class="label">SONIYA</span>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="openPromoModal">
+        <span>🎟️</span> Promokodni Kiritish
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <div class="pepsi-globe-icon"></div>
+          <span class="brand-text">PEPSI</span>
+        </a>
+        <p>
+          Pepsi — Har bir lahzani unutilmas energiyaga va yorqin ta'mga to'ldiruvchi dunyodagi eng mashhur salqinlashtiruvchi ichimlik.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Mahsulotlar</h4>
+        <ul>
+          <li><a href="#products">Pepsi Classic</a></li>
+          <li><a href="#products">Pepsi Zero Sugar</a></li>
+          <li><a href="#products">Pepsi Mango</a></li>
+          <li><a href="#products">Pepsi Wild Cherry</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Aksiya & Tadbirlar</h4>
+        <ul>
+          <li><a href="#campaign">Music Festival 2026</a></li>
+          <li><a href="#campaign">Sovrinlar Ro'yxati</a></li>
+          <li><a href="#mixer">Interaktiv Mikser</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ijtimoiy Tarmoqlar</h4>
+        <div style="display: flex; gap: 1rem; margin-top: 0.5rem; font-size: 1.4rem;">
+          <a href="#" style="color: var(--pepsi-cyan)">📱</a>
+          <a href="#" style="color: var(--pepsi-cyan)">✈️</a>
+          <a href="#" style="color: var(--pepsi-cyan)">📸</a>
+          <a href="#" style="color: var(--pepsi-cyan)">▶️</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 PepsiCo Inc. Barcha huquqlar himoyalangan.</p>
+      <p>Loyiha ishlanmasi: Antigravity AI Team</p>
+    </div>
+  </footer>
+
+  <!-- Modal for Product Details -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closeProdModal">✕</button>
+      <h2 id="modalTitle" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--pepsi-cyan);">Pepsi Title</h2>
+      <p id="modalDesc" style="color: var(--text-dim); margin-bottom: 1.5rem; line-height: 1.7;">Description...</p>
+      
+      <div style="background: rgba(255,255,255,0.05); padding: 1.2rem; border-radius: 12px; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span>Kaloriya qiymati:</span>
+          <strong id="modalCal" style="color: white;">150 kcal</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span>Kofein miqdori:</span>
+          <strong id="modalCaffeine" style="color: white;">38 mg</strong>
+        </div>
+      </div>
+
+      <button class="btn-primary btn-red" style="width: 100%;" id="modalBuyBtn">🛒 Magazindan Qidirish</button>
+    </div>
+  </div>
+
+  <!-- Modal for Promo Entry -->
+  <div class="modal-backdrop" id="promoModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closePromoModal">✕</button>
+      <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--pepsi-cyan);">Promokodni Kiritish</h2>
+      <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Qopqoq ostidagi 8 xonali kodni kiriting va sovrin yutib oling!</p>
+      
+      <input type="text" id="promoInput" placeholder="Masalan: PEP2026X" style="width: 100%; padding: 0.9rem; border-radius: 12px; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.5); color: white; font-size: 1.1rem; font-weight: 700; text-align: center; text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: 2px;">
+
+      <button class="btn-primary" style="width: 100%;" id="submitPromoBtn">Tekshirish & Tasdiqlash</button>
+      <div id="promoResult" style="margin-top: 1rem; text-align: center; font-weight: 700;"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
